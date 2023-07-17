@@ -1,0 +1,15 @@
+.table {
+	margin: 0;
+}
+
+.registro-nao-existe {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #dee2e6;
+	padding: 20px 0;
+}
+
+.registro-nao-existe > p {
+	margin: 0;
+}

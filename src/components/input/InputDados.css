@@ -1,0 +1,27 @@
+.dados {
+	position: absolute;
+	top: 100%;
+	background-color: white;
+	border: 1px solid darkgray;
+	left: 0;
+	right: 0;
+	border-radius: 5px;
+	text-align: center;
+	padding: 0;
+}
+
+.dado {
+	font-size: 1rem;
+	padding: 5px 5px;
+	margin: 0;
+	list-style: none;
+}
+
+.dado:hover {
+	background-color: rgb(223, 220, 220);
+	cursor: pointer;
+}
+
+.ocuta {
+	display: none;
+}

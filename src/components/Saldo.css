@@ -1,0 +1,15 @@
+.saldos-cotainer {
+	display: flex;
+	justify-content: flex-start;
+	column-gap: 35px;
+	border: 1px solid #dee2e6;
+}
+
+.saldos-cotainer > p {
+	margin: 0;
+	padding: 12px 10px;
+}
+
+.ocuta {
+	display: none;
+}

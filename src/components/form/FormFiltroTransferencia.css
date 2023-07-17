@@ -1,0 +1,28 @@
+.container-formulario {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-campo {
+	display: flex;
+	justify-content: space-between;
+}
+
+.botaoEnviar {
+	align-self: flex-end;
+	padding: 5px;
+}
+
+@media screen and (max-width: 650px) {
+	.container-campo {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 25px;
+	}
+
+	.botaoEnviar {
+		align-self: center;
+		padding: 5px;
+	}
+}
