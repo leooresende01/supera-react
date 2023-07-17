@@ -36,7 +36,7 @@ export function FormFiltroTransferencia(formParams: FormParams) {
 			filtros.addFiltro({ nome: chave, valor: valor.toString() }));
 		navigate(`/contas/${formParams.id}/transferencias`);
 		filtros.pegaFiltrosInvalidos().forEach((filtro: Filtro) => searchParams.delete(filtro.nome));
-		filtros.pegaFiltros().forEach((filtro) => searchParams.set(filtro.nome, filtro.valor));
+		filtros.pegaFiltrosValidos().forEach((filtro) => searchParams.set(filtro.nome, filtro.valor));
 		paginaAtualContas && searchParams.set('paginaAtualContas', paginaAtualContas);
 		setSearchParams(searchParams);
 	}

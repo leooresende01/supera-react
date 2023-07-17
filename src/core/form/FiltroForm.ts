@@ -16,6 +16,7 @@ export class FiltroForm {
 			.map((parametros) => {
 				return {nome: parametros.split('=')[0], valor: parametros.split('=')[1]} as Filtro
 			})
+			.filter((filtro: Filtro) => filtro.valor)
 			.forEach((filtro) => filtroForm.addFiltro(filtro));
 		return filtroForm;
 	}
@@ -31,7 +32,7 @@ export class FiltroForm {
 	}
 
 
-	public pegaFiltros(): Array<Filtro> {
+	public pegaFiltrosValidos(): Array<Filtro> {
 		return this.filtros.filter((filtro: Filtro) => filtro.valor);
 	}
 
@@ -40,11 +41,11 @@ export class FiltroForm {
 	}
 
 	public temAlgumFiltro(): boolean {
-		return !!this.pegaFiltros().length;
+		return this.pegaFiltrosValidos().length > 0;
 	}
 
 	public pegaFiltrosQuery(): string {
-		return this.temAlgumFiltro() ? "?" + this.pegaFiltros().
+		return this.temAlgumFiltro() ? "?" + this.pegaFiltrosValidos().
 			map((filtro: Filtro) => `${filtro.nome}=${filtro.valor}`).join('&') : '';
 	}
 
