@@ -68,6 +68,7 @@ export default function Transferencia() {
 					.buscaTransferenciasComFiltro(id, filtroForm);
 				setTransferencias(transferenciasDto);
 				setSaldos(await transferenciaService.buscaSaldos(id, filtroForm));
+				setContasIdDto(await contaService.buscaIdsDasContas(paginaAtualContas));
 				if (transferencias) setHasErros(false);
 			} catch (e) { setHasErros(true) }
 			estaBuscandoTransferencias = false;
