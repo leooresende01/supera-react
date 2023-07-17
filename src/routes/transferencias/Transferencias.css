@@ -1,0 +1,38 @@
+.espaco {
+	margin: 75px 150px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+	.espaco {
+		margin: 50px 85px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.espaco {
+		margin: 15px 35px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.espaco {
+		margin: 15px 5px;
+	}
+
+	.transferencias-container {
+		font-size: 0.8rem!important;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.espaco {
+		margin: 15px 0px;
+	}
+
+	.transferencias-container {
+		font-size: 0.6rem!important;
+	}
+}
